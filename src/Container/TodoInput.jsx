@@ -21,19 +21,19 @@ export const TodoInput = ({ item, handleChange }) => (
         onChange={handleChange}
       />
     </td>
-    <td>
+  <td>
       <input
         type="text"
-        name={"weight"}
-        value={item.weight}
+        name={"height"}
+        value={item.height}
         onChange={handleChange}
       />
     </td>
     <td>
       <input
         type="text"
-        name={"height"}
-        value={item.height}
+        name={"weight"}
+        value={item.weight}
         onChange={handleChange}
       />
     </td>
