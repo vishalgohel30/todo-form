@@ -18,12 +18,12 @@ export default function Container() {
   const [isAdd, setIsAdd] = useState(false);
 
   const handleChange = useCallback(
-    ({ target: { name, value }, rowObj, type = "" }) => {
+    ({ target: { name, value }, rowObj, index, type = "" }) => {
       if (type === "add") {
         setAddTodoItem({ ...addTodoItemObj, [name]: value });
         return;
       }
-      let match = todoItems.find((a) => a.sNo === rowObj.sNo);
+      let match = todoItems[index]
       if (match) match[name] = value;
       setTodoItems([...todoItems]);
     },
