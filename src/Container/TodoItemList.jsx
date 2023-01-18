@@ -27,14 +27,14 @@ const CompoentObj = {
         </tr>
       </thead>
       <tbody>
-        {todoItems.map((item) => {
+        {todoItems.map((item, index) => {
           const C = CompoentObj[isEdit];
           return (
             <tr key={item.sNo}>
               <C
                 item={item}
                 handleChange={({ target }) =>
-                  handleChange({ target, rowObj: item })
+                  handleChange({ target, rowObj: item , index})
                 }
               />
               <td onClick={() => handleRemove(item)}>X</td>
